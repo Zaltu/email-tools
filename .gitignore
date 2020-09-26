@@ -1,0 +1,5 @@
+# Ignore secrets
+*.secret
+
+# Ignore local tests with personal info
+DOC/example.py
