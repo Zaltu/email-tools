@@ -1,0 +1,3 @@
+import emailtools
+
+SKILLS = ["emailtools"]
