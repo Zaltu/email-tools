@@ -18,6 +18,8 @@ def simple_email(sender, recipient, subject, message):
     :param str subject: email subject
     :param str message: text message to send as email body
     """
+    if isinstance(recipient, list):
+        recipient = ", ".join(recipient)
     msg = MIMEText(message)
     msg['Subject'] = subject
     msg['From'] = sender
