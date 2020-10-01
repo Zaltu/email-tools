@@ -6,7 +6,6 @@ from email.mime.image import MIMEImage
 from email.header import Header
 
 SMTP = smtplib.SMTP()
-SMTP.connect('localhost')
 
 
 def simple_email(sender, recipient, subject, message):
@@ -24,4 +23,5 @@ def simple_email(sender, recipient, subject, message):
     msg['Subject'] = subject
     msg['From'] = sender
     msg['To'] = recipient
+    SMTP.connect('localhost')
     SMTP.send_message(msg)
